@@ -1,8 +1,37 @@
-
+/* eslint-disable no-unused-vars */
+import { useEffect, useState } from "react";
+import useMediaQuery from './hooks/useMediaQuery.jsx'
+import Navbar from "./scenes/Navbar.jsx";
+import DotGroup from './scenes/DotGroup';
 function App() {
+  const [selectedPage, setSelectedPage] = useState('home');
+  const [isTopOfPage, setIsTopOfPage] = useState(true);
+  const isAboveMediumScreens=useMediaQuery("(min-width:1060px)");
+
+  useEffect(()=>{
+    const handleScroll=()=>{
+      if(window.scrollY===0) setIsTopOfPage(true);
+      if(window.scrollY !==0) setIsTopOfPage(false);
+    }
+  window.addEventListener('scroll',handleScroll);
+
+  return ()=>window.removeEventListener('scroll', handleScroll);
+  }, []);
+  
   return (
-  <div className="app">
-    <h1 className="">grsrgeg</h1>
+  <div className="app bg-deep-blue">
+    <Navbar
+      selectdPage={selectedPage}
+      setSelectdPage={setSelectedPage}
+    />
+    <div className="w-5/6 mx-auto md:h-full">
+    {isAboveMediumScreens && (<DotGroup
+     selectedPage={selectedPage}
+     setSelectedPage={setSelectedPage}
+
+    />)}
+
+    </div>
   </div>)
 }
 
