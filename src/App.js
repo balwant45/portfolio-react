@@ -6,6 +6,7 @@ import DotGroup from './scenes/DotGroup';
 import Landing from "./scenes/Landing.jsx";
 import LineGradient from "./component/LineGradient.jsx";
 import MySkills from "./scenes/MySkills.jsx";
+import Projects from "./scenes/Projects.jsx";
 function App() {
   const [selectedPage, setSelectedPage] = useState("home");
   const [isTopOfPage, setIsTopOfPage] = useState(true);
@@ -39,6 +40,10 @@ function App() {
 <LineGradient/>
 <div className="w-5/6 mx-auto md:h-full">
   <MySkills/>
+</div>
+<LineGradient/>
+<div className="w-5/6 mx-auto ">
+  <Projects/>
 </div>
   </div>)
 }
