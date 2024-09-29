@@ -91,7 +91,7 @@ BS
   selectedPage={selectedPage}
 />
 <Link
-  page="Project"
+  page="Projects"
   setSelectedPage={setSelectedPage}
   selectedPage={selectedPage}
 />
