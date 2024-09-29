@@ -7,6 +7,8 @@ import Landing from "./scenes/Landing.jsx";
 import LineGradient from "./component/LineGradient.jsx";
 import MySkills from "./scenes/MySkills.jsx";
 import Projects from "./scenes/Projects.jsx";
+import Contact from "./scenes/Contact.jsx";
+import Footer from "./scenes/Footer.jsx";
 function App() {
   const [selectedPage, setSelectedPage] = useState("home");
   const [isTopOfPage, setIsTopOfPage] = useState(true);
@@ -46,6 +48,12 @@ function App() {
 <div className="w-5/6 mx-auto ">
   <Projects/>
 </div>
+<LineGradient/>
+<div className="w-5/6 mx-auto">
+<Contact/>
+</div>
+<Footer/>
+
   </div>)
 }
 
