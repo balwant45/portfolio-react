@@ -14,7 +14,7 @@ function App() {
 
   useEffect(()=>{
     const handleScroll=()=>{
-      if(window.scrollY===0) {setIsTopOfPage(true); setSelectedPage("home");};
+      if(window.scrollY===0) {setIsTopOfPage(true)};
       if(window.scrollY !==0) setIsTopOfPage(false);
     }
   window.addEventListener('scroll',handleScroll);
@@ -26,8 +26,8 @@ function App() {
   <div className="app bg-deep-blue">
     <Navbar
      isTopOfPage={isTopOfPage}
-      selectdPage={selectedPage}
-      setSelectdPage={setSelectedPage}
+      selectedPage={selectedPage}
+      setSelectedPage={setSelectedPage}
     />
     <div className="w-5/6 mx-auto md:h-full">
     {isAboveMediumScreens && (
@@ -38,9 +38,10 @@ function App() {
     <Landing/>
     </div>
 <LineGradient/>
-<div className="w-5/6 mx-auto md:h-full">
+<div className="w-5/6 mx-auto md:h-full mb-5">
   <MySkills/>
 </div>
+
 <LineGradient/>
 <div className="w-5/6 mx-auto ">
   <Projects/>
