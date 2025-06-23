@@ -44,16 +44,15 @@ function Landing({ setSelectedPage }) {
             visible: { opacity: 1, x: 0 },
           }}
         >
-          <p className="text-6xl font-playfair z-10 text-center md:text-start">
-            Balwant {""}
-            <span
-              className="xs:relative xs:text-deep-blue xs:font-semibold z-20 xs:before:content-brush
+        <p className="text-6xl font-playfair z-10 text-center md:text-start">
+          Rhonda {""}
+          <span  className="xs:relative xs:text-deep-blue xs:font-semibold z-20 xs:before:content-brush
               before:absolute before:-left-[25px] before:-top-[70px] before:z-[-1]"
-            >
-              Singh
-            </span>
-          </p>
-          <p className="mt-10 mb-7 text-sm text-center md:text-start">
+           >
+          Bryan
+          </span>
+        </p>
+        <p className="mt-10 mb-7 text-sm text-center md:text-start">
             Adipiscing arcu, in aliquam fringilla cursus. Elit arcu elementum
             viverra malesuada sem ac faucibus dolor. Sagittis scelerisque.
           </p>
